@@ -90,7 +90,38 @@ class Fraction {
         return new Fraction(numerator, denominator);
     }
 
+    boolean lessThanZero (){
+        // returns True if this is less than zero
+        return numerator < 0;
+    }
 
+    boolean greaterThanZero(){
+        return numerator > 0;
+    }
+
+    boolean equalsZero(){
+        return numerator == 0;
+    }
+
+    Fraction add(Fraction other){
+        // a/b + c/d
+        // = (a * d + b * c) / (b * d)
+        int commonDenominator = denominator * other.denominator; 
+        int numeratorOfResult = numerator * other.denominator + other.numerator * denominator;
+        return new Fraction (numeratorOfResult, commonDenominator);
+    }
+    
+    Fraction substract(Fraction other){
+        return this.add(new Fraction(other.numerator = -1 * other.numerator));
+    }
+    Fractoin valueOf(String enter){
+
+    }
+
+    static void testAdd(){
+        Fraction f = 
+        Fraction g = 
+    }
 
 
     public static void main(String[] args) {
